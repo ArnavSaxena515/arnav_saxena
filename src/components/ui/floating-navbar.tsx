@@ -61,7 +61,7 @@ export const FloatingNav = ({
       >
 
         {
-            // @ts-ignore
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             navItems.map((navItem: any, idx: number) => (
           <Link
             key={`link=${idx}`}
