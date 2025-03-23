@@ -1,6 +1,5 @@
 import React from "react";
 import {Spotlight} from "@/components/ui/spotlight";
-import {GridBackground} from "@/components/ui/grid_background";
 import {TextGenerateEffect} from "@/components/ui/text-generate-effect";
 import MagicButton from "@/components/ui/magic-button";
 import {FaLocationArrow} from "react-icons/fa6";
@@ -26,7 +25,7 @@ const Hero = () => {
                         Sic Parvis Magna
                     </h2>
                     <TextGenerateEffect words={"Heard I'm pretty dope so I guess I gotta oblige"} className="text-center md:text-5xl lg:text-6xl"/>
-                    <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">I'm Arnav</p>
+                    <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">I&apos;m Arnav</p>
                     <a href="#about">
                         <MagicButton title={"Show my work"} icon={<FaLocationArrow/>} position={"right"} otherClasses={""} />
                     </a>
