@@ -82,6 +82,7 @@ export function Globe({globeConfig, data}: WorldProps) {
     useEffect(() => {
         if (!globeRef.current && groupRef.current) {
             globeRef.current = new ThreeGlobe();
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             (groupRef.current as any).add(globeRef.current);
             setIsInitialized(true);
         }
@@ -114,7 +115,7 @@ export function Globe({globeConfig, data}: WorldProps) {
         if (!globeRef.current || !isInitialized || !data) return;
 
         const arcs = data;
-        let points = [];
+        const points = [];
         for (let i = 0; i < arcs.length; i++) {
             const arc = arcs[i];
             hexToRgb(arc.color) as { r: number; g: number; b: number };
@@ -159,6 +160,7 @@ export function Globe({globeConfig, data}: WorldProps) {
             .arcStartLng((d) => (d as { startLng: number }).startLng)
             .arcEndLat((d) => (d as { endLat: number }).endLat)
             .arcEndLng((d) => (d as { endLng: number }).endLng)
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             .arcColor((e: any) => (e as { color: string }).color)
             .arcAltitude((e) => (e as { arcAlt: number }).arcAlt)
             .arcStroke(() => [0.32, 0.28, 0.3][Math.round(Math.random() * 2)])
