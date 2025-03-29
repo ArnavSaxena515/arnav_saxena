@@ -20,7 +20,8 @@ export const gridItems = [
         id: 2,
         title: "I'm very flexible with time zones and communications",
         description: "",
-        className: "lg:col-span-2 md:col-span-3 min-h-[15vh] col-span-6",
+        className: "lg5col-span-2 md:col-span-3" +
+            " min-h-[20vh] col-span-6",
         imgClassName: "",
         titleClassName: "justify-start",
         img: "",
@@ -30,7 +31,8 @@ export const gridItems = [
         id: 3,
         title: "My tech stack",
         description: "I constantly try to improve",
-        className: "lg:col-span-2 md:col-span-3 col-span-6 min-h-[15vh] ",
+        className: "lg:col-span-3 md:col-span-3" +
+            " col-span-6 min-h-[30vh] ",
         imgClassName: "",
         titleClassName: "justify-center",
         img: "",

@@ -1,5 +1,7 @@
 import {cn} from "@/lib/utils";
-import {BackgroundGradientAnimation} from "@/components/ui/background-gradient-animation";
+import {
+    BackgroundGradientAnimation
+} from "@/components/ui/background-gradient-animation";
 import {GridGlobe} from "@/components/ui/grid-globe";
 import React from "react";
 
@@ -17,8 +19,14 @@ export const BentoGrid = ({
 };
 
 export const BentoGridItem = ({
-                                  className, id, title, description,
-                                  img, imgClassName, titleClassName, spareImg,
+                                  className,
+                                  id,
+                                  title,
+                                  description,
+                                  img,
+                                  imgClassName,
+                                  titleClassName,
+                                  spareImg,
                               }: {
     className?: string;
     id: number;
@@ -39,7 +47,8 @@ export const BentoGridItem = ({
         }}
     >
         {/* add img divs */}
-        <div className={`${id === 6 && "flex justify-center"} h-full`}>
+        <div
+            className={`${id === 6 && "flex justify-center"} h-full`}>
             <div className="w-full h-full absolute">
                 {img && (<img
                     src={img}
@@ -81,8 +90,10 @@ export const BentoGridItem = ({
             </div>
             {id === 2 && <GridGlobe/>}
 
-            {id === 3 && <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
-                <div className="flex flex-col gap-2 lg:gap-8">
+            {id === 3 && <div
+                className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
+                <div
+                    className="flex flex-col gap-2 lg:gap-8">
                     {['React.js', 'Next.js', 'Typescript'].map((item) => (
                         <span key={item}
                               className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132e]">
@@ -90,9 +101,11 @@ export const BentoGridItem = ({
                         </span>
 
                     ))}
-                    <span className="py-4 px-3 rounded-lg text-center bg-[#10132e]"/>
+                    <span
+                        className="py-4 px-3 rounded-lg text-center bg-[#10132e]"/>
                 </div>
-                <div className="flex flex-col gap-2 lg:gap-8">
+                <div
+                    className="flex flex-col gap-2 lg:gap-8">
                     {['Flutter', 'Node.js', 'MongoDB'].map((item) => (
                         <span key={item}
                               className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132e]">
